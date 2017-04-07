@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="agh-J9-xWj">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="agh-J9-xWj">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Image Picker View Controller-->
+        <!--Image Detail View Controller-->
         <scene sceneID="UJv-dg-ODj">
             <objects>
-                <viewController id="agh-J9-xWj" customClass="ImagePickerViewController" customModule="ImageReviewer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImageDetailViewController" id="agh-J9-xWj" customClass="ImageDetailViewController" customModule="ImageReviewer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TIn-6d-2Jq"/>
                         <viewControllerLayoutGuide type="bottom" id="g70-p7-70z"/>
@@ -23,9 +23,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ipA-F8-cn3">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_photo" translatesAutoresizingMaskIntoConstraints="NO" id="ipA-F8-cn3">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
-                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.10196078431372549" green="0.13333333333333333" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ipA-F8-cn3" secondAttribute="height" multiplier="1:1" id="fgC-qG-3Qz"/>
                                 </constraints>
@@ -84,8 +84,8 @@
                             <constraint firstItem="2r6-Bn-d6E" firstAttribute="top" secondItem="jl3-7o-sOF" secondAttribute="topMargin" constant="29" id="0Cx-mb-6Uo"/>
                             <constraint firstItem="iwr-fB-IOx" firstAttribute="centerX" secondItem="jl3-7o-sOF" secondAttribute="centerX" id="0K7-M8-Ziw"/>
                             <constraint firstItem="Bjc-PK-fQA" firstAttribute="top" secondItem="iwr-fB-IOx" secondAttribute="bottom" constant="20" id="11V-X1-o0S"/>
+                            <constraint firstItem="g70-p7-70z" firstAttribute="top" secondItem="QgH-Kw-iDm" secondAttribute="bottom" constant="8" id="5Wg-h9-w1R"/>
                             <constraint firstItem="QgH-Kw-iDm" firstAttribute="top" secondItem="Bjc-PK-fQA" secondAttribute="bottom" constant="12" id="9vs-EV-85z"/>
-                            <constraint firstItem="g70-p7-70z" firstAttribute="top" secondItem="QgH-Kw-iDm" secondAttribute="bottom" constant="8" id="N4Y-mw-qrN"/>
                             <constraint firstItem="2r6-Bn-d6E" firstAttribute="leading" secondItem="jl3-7o-sOF" secondAttribute="leading" constant="20" id="Oq3-L8-vLi"/>
                             <constraint firstItem="iwr-fB-IOx" firstAttribute="top" secondItem="ipA-F8-cn3" secondAttribute="bottom" constant="10" id="SUS-m1-Qa6"/>
                             <constraint firstItem="Bjc-PK-fQA" firstAttribute="centerX" secondItem="jl3-7o-sOF" secondAttribute="centerX" id="Uiu-BY-1v1"/>
@@ -97,9 +97,10 @@
                             <constraint firstItem="QgH-Kw-iDm" firstAttribute="centerX" secondItem="jl3-7o-sOF" secondAttribute="centerX" id="yRy-HY-x24"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
                         <outlet property="ImageButton" destination="QgH-Kw-iDm" id="rqu-97-nQq"/>
-                        <outlet property="contentTextView" destination="Bjc-PK-fQA" id="D88-aU-ccP"/>
+                        <outlet property="cancelButton" destination="2r6-Bn-d6E" id="rx4-Te-Hhc"/>
                         <outlet property="imageView" destination="ipA-F8-cn3" id="v4m-UA-zbm"/>
                         <outlet property="titleTextField" destination="iwr-fB-IOx" id="6Tb-N1-dNq"/>
                     </connections>
@@ -111,5 +112,6 @@
     </scenes>
     <resources>
         <image name="button_close" width="44" height="44"/>
+        <image name="icon_photo" width="44" height="44"/>
     </resources>
 </document>
