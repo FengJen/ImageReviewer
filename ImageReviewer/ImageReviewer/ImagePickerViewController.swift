@@ -6,6 +6,10 @@ class ImagePickerViewController: UIViewController, UIImagePickerControllerDelega
     
     @IBOutlet weak var ImageButton: UIButton!
    
+    @IBOutlet weak var titleTextField: UITextField!
+    
+    @IBOutlet weak var contentTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,8 +51,18 @@ class ImagePickerViewController: UIViewController, UIImagePickerControllerDelega
         ImageButton.layer.shadowOpacity = 1.0
         ImageButton.layer.shouldRasterize = true
         
+        ImageButton.addTarget(self, action: #selector(save), for: .touchUpInside)
+        
     }
     
+    func save() {
+//        let newImage = Image(title: titleTextField.text!, content: contentTextView.text!, image: "Ya")
+//        ImageReviewerManager.shared.saveText(newImage)
+
+        ImageReviewerManager.shared.fetch()
+        
+        print(ImageReviewerManager.shared.imageArray)
+    }
     func addCloseButton() {
         
     }

@@ -99,7 +99,9 @@
                     </view>
                     <connections>
                         <outlet property="ImageButton" destination="QgH-Kw-iDm" id="rqu-97-nQq"/>
+                        <outlet property="contentTextView" destination="Bjc-PK-fQA" id="D88-aU-ccP"/>
                         <outlet property="imageView" destination="ipA-F8-cn3" id="v4m-UA-zbm"/>
+                        <outlet property="titleTextField" destination="iwr-fB-IOx" id="6Tb-N1-dNq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WgU-6j-wvB" userLabel="First Responder" sceneMemberID="firstResponder"/>
