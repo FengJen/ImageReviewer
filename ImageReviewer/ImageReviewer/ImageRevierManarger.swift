@@ -33,7 +33,7 @@ class ImageReviewerManager {
             guard let request = try context.fetch(request) as? [ImageModel] else { return }
             
             for image in request {
-                let model = Image(title: image.title!, content: image.content!, image: "Ya")
+                let model = Image(title: image.title!, content: image.content!, image: "YA")
                 imageArray.append(model)
             }
             
@@ -41,4 +41,6 @@ class ImageReviewerManager {
             print(error)
         }
     }
+    
+    
 }
